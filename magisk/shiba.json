@@ -1,7 +1,7 @@
 {
   "version": 2,
   "full": {
-    "location_ota": "https://github.com/XeniumGH/PixeneOS/releases/download/2026040600/shiba-2026040600-magisk-v30.7-6fdb3b6.zip",
-    "location_csig": "https://github.com/XeniumGH/PixeneOS/releases/download/2026040600/shiba-2026040600-magisk-v30.7-6fdb3b6.zip.csig"
+    "location_ota": "https://github.com/XeniumGH/PixeneOS/releases/download/2026042100/shiba-2026042100-magisk-v30.7-0a0ab89.zip",
+    "location_csig": "https://github.com/XeniumGH/PixeneOS/releases/download/2026042100/shiba-2026042100-magisk-v30.7-0a0ab89.zip.csig"
   }
 }
