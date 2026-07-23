@@ -92,7 +92,7 @@ jobs:
         if: github.event_name == 'schedule' || github.event.inputs.release-type == 'default'
         run: |
           # Determine if the build is based on magisk or rootless (build flavor)
-          build_flavor=$([[ ${{ github.event.inputs.root == 'true' }} == 'true' ]] && echo 'magisk' || echo 'magisk')
+          build_flavor=$([[ ${{ github.event.inputs.root == 'true' }} == 'true' ]] && echo 'magisk' || echo 'rootless')
 
           # Check if the tag exists
           if git show-ref --tags $GRAPHENEOS_VERSION --quiet; then
@@ -105,8 +105,8 @@ jobs:
             required_assets=(
               "${{ env.DEVICE_NAME }}-$GRAPHENEOS_VERSION-magisk-*.zip"
               "${{ env.DEVICE_NAME }}-$GRAPHENEOS_VERSION-magisk-*.zip.csig"
-              "${{ env.DEVICE_NAME }}-$GRAPHENEOS_VERSION-magisk-*.zip"
-              "${{ env.DEVICE_NAME }}-$GRAPHENEOS_VERSION-magisk-*.zip.csig"
+              "${{ env.DEVICE_NAME }}-$GRAPHENEOS_VERSION-rootless-*.zip"
+              "${{ env.DEVICE_NAME }}-$GRAPHENEOS_VERSION-rootless-*.zip.csig"
             )
 
             existing_assets=$(echo "$release_info" | jq -r '.assets[].name')
